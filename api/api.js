@@ -6,6 +6,10 @@ const api = express();
 //Configurar middlewares generales
 api.use(express.json());
 
+api.get('/status', (_, res) =>{
+  res.send('API en linea y funcionando')
+})
+
 api.use(booksRoute)
 
 
